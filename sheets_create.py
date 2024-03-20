@@ -38,7 +38,7 @@ def main():
 
     try:
         service = build("sheets", "v4", credentials=creds)
-        spreadsheet = {"properties": {"title": 'sheet_teste'}}
+        spreadsheet = {"properties": {"title": 'sheet criada com google api'}}
         spreadsheet = (service.spreadsheets().create(body=spreadsheet, fields="spreadsheetId").execute())
 
         print(f"Spreadsheet ID: {(spreadsheet.get('spreadsheetId'))}")
